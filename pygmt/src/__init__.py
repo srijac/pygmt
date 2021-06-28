@@ -4,7 +4,7 @@ Source code for PyGMT modules.
 # pylint: disable=import-outside-toplevel
 
 from pygmt.src.basemap import basemap
-from pygmt.src.blockm import blockmean, blockmedian
+from pygmt.src.blockmedian import blockmedian
 from pygmt.src.coast import coast
 from pygmt.src.colorbar import colorbar
 from pygmt.src.config import config
@@ -41,3 +41,4 @@ from pygmt.src.which import which
 from pygmt.src.wiggle import wiggle
 from pygmt.src.x2sys_cross import x2sys_cross
 from pygmt.src.x2sys_init import x2sys_init
+from pygmt.src.xyz2grd import xyz2grd
