@@ -357,7 +357,10 @@ angle (col 3)</p></li>
 </p></li>
 <li><p><strong>D</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Dump contour coordinates.</p></li>
 <li><p><strong>E</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Network information.</p></li>
-<li><p><strong>label_placement</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Placement of labels.</p></li>
+<li><p><strong>label_placement</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – [<strong>d</strong>|<strong>f</strong>|<strong>n</strong>|<strong>l</strong>|<strong>L</strong>|<strong>x</strong>|<strong>X</strong>]<em>args</em>.
+Control the placement of labels along the quoted lines. It supports
+five controlling algorithms. See <a class="reference external" href="https://docs.generic-mapping-tools.org/latest/contour.html#g">https://docs.generic-mapping-tools.org/latest/contour.html#g</a> for
+details.</p></li>
 <li><p><strong>I</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Color the triangles using CPT.</p></li>
 <li><p><strong>triangular_mesh_pen</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Pen to draw the underlying triangulation [Default is none].</p></li>
 <li><p><strong>no_clip</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Do NOT clip contours or image at the boundaries [Default will clip
@@ -472,10 +475,10 @@ in the image (for further processing).</p></li>
         &#169; Copyright 2017-2021, The PyGMT Developers.
       <span class="commit">
         
-        Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/31980e8">31980e8</a></code>.
+        Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/cd822ca2">cd822ca2</a></code>.
       </span>
       <span class="lastupdated">
-        Last updated on Aug 07, 2021.
+        Last updated on Aug 17, 2021.
       </span>
 
     </p>

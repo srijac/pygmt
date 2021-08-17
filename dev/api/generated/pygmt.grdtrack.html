@@ -54,8 +54,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="pygmt.x2sys_init" href="pygmt.x2sys_init.html" />
-    <link rel="prev" title="pygmt.grdgradient" href="pygmt.grdgradient.html" />
+    <link rel="next" title="pygmt.xyz2grd" href="pygmt.xyz2grd.html" />
+    <link rel="prev" title="pygmt.grdsample" href="pygmt.grdsample.html" />
     <!-- Google Analytics tracking code -->
     <!-- See https://developers.google.com/analytics/devguides/collection/analyticsjs/ for documentation. -->
     <!-- 'storage': 'none' disables cookies -->
@@ -161,10 +161,12 @@
 <li class="toctree-l3"><a class="reference internal" href="pygmt.grdfilter.html">pygmt.grdfilter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.grdlandmask.html">pygmt.grdlandmask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.grdgradient.html">pygmt.grdgradient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.grdsample.html">pygmt.grdsample</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">pygmt.grdtrack</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#examples-using-pygmt-grdtrack">Examples using <code class="docutils literal notranslate"><span class="pre">pygmt.grdtrack</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.xyz2grd.html">pygmt.xyz2grd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.x2sys_init.html">pygmt.x2sys_init</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.x2sys_cross.html">pygmt.x2sys_cross</a></li>
 </ul>
@@ -316,15 +318,15 @@ recognized as periodic.)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>points</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><em>numpy.ndarray</em></a><em> or </em><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.1)"><em>pandas.DataFrame</em></a><em> or </em><a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.19.1.dev6)"><em>xarray.Dataset</em></a><em> or </em><a class="reference external" href="https://geopandas.org/docs/reference/api/geopandas.GeoDataFrame.html#geopandas.GeoDataFrame" title="(in GeoPandas v0.9.0)"><em>geopandas.GeoDataFrame</em></a>) – Pass in either a file name to an ASCII data table, a 2D
-<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>, a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>, an
+<li><p><strong>points</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><em>numpy.ndarray</em></a><em> or </em><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.2)"><em>pandas.DataFrame</em></a><em> or </em><a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.19.1.dev6)"><em>xarray.Dataset</em></a><em> or </em><a class="reference external" href="https://geopandas.org/docs/reference/api/geopandas.GeoDataFrame.html#geopandas.GeoDataFrame" title="(in GeoPandas v0.9.0)"><em>geopandas.GeoDataFrame</em></a>) – Pass in either a file name to an ASCII data table, a 2D
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>, a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>, an
 <a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.19.1.dev6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a> made up of 1D <a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.19.1.dev6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a>
 data variables, or a <a class="reference external" href="https://geopandas.org/docs/reference/api/geopandas.GeoDataFrame.html#geopandas.GeoDataFrame" title="(in GeoPandas v0.9.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">geopandas.GeoDataFrame</span></code></a> containing the
 tabular data.</p></li>
 <li><p><strong>grid</strong> (<a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.19.1.dev6)"><em>xarray.DataArray</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Gridded array from which to sample values from, or a filename (netcdf
 format).</p></li>
-<li><p><strong>newcolname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Required if <code class="docutils literal notranslate"><span class="pre">points</span></code> is a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>. The name for the
-new column in the track <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> table where the
+<li><p><strong>newcolname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Required if <code class="docutils literal notranslate"><span class="pre">points</span></code> is a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>. The name for the
+new column in the track <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> table where the
 sampled values will be placed.</p></li>
 <li><p><strong>outfile</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The file name for the output ASCII file.</p></li>
 <li><p><strong>resample</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – <strong>f</strong>|<strong>p</strong>|<strong>m</strong>|<strong>r</strong>|<strong>R</strong>[<strong>+l</strong>]
@@ -557,7 +559,7 @@ spline used:</p>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><p><strong>track</strong> (<em>pandas.DataFrame or None</em>) – Return type depends on whether the <code class="docutils literal notranslate"><span class="pre">outfile</span></code> parameter is set:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> table with (x, y, …, newcolname) if
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> table with (x, y, …, newcolname) if
 <code class="docutils literal notranslate"><span class="pre">outfile</span></code> is not set</p></li>
 <li><p>None if <code class="docutils literal notranslate"><span class="pre">outfile</span></code> is set (track output will be stored in file set
 by <code class="docutils literal notranslate"><span class="pre">outfile</span></code>)</p></li>
@@ -583,8 +585,8 @@ by <code class="docutils literal notranslate"><span class="pre">outfile</span></
           
 <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="pygmt.x2sys_init.html" class="btn btn-neutral float-right" title="pygmt.x2sys_init" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="pygmt.grdgradient.html" class="btn btn-neutral float-left" title="pygmt.grdgradient" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pygmt.xyz2grd.html" class="btn btn-neutral float-right" title="pygmt.xyz2grd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pygmt.grdsample.html" class="btn btn-neutral float-left" title="pygmt.grdsample" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
@@ -594,10 +596,10 @@ by <code class="docutils literal notranslate"><span class="pre">outfile</span></
         &#169; Copyright 2017-2021, The PyGMT Developers.
       <span class="commit">
         
-        Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/31980e8">31980e8</a></code>.
+        Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/cd822ca2">cd822ca2</a></code>.
       </span>
       <span class="lastupdated">
-        Last updated on Aug 07, 2021.
+        Last updated on Aug 17, 2021.
       </span>
 
     </p>

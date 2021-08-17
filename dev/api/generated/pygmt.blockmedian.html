@@ -161,7 +161,9 @@
 <li class="toctree-l3"><a class="reference internal" href="pygmt.grdfilter.html">pygmt.grdfilter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.grdlandmask.html">pygmt.grdlandmask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.grdgradient.html">pygmt.grdgradient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.grdsample.html">pygmt.grdsample</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.grdtrack.html">pygmt.grdtrack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.xyz2grd.html">pygmt.xyz2grd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.x2sys_init.html">pygmt.x2sys_init</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.x2sys_cross.html">pygmt.x2sys_cross</a></li>
 </ul>
@@ -301,9 +303,9 @@ for every non-empty block in a grid region defined by the <code class="docutils 
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>table</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><em>numpy.ndarray</em></a><em> or </em><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.1)"><em>pandas.DataFrame</em></a><em> or </em><a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.19.1.dev6)"><em>xarray.Dataset</em></a><em> or </em><a class="reference external" href="https://geopandas.org/docs/reference/api/geopandas.GeoDataFrame.html#geopandas.GeoDataFrame" title="(in GeoPandas v0.9.0)"><em>geopandas.GeoDataFrame</em></a>) – Pass in (x, y, z) or (longitude, latitude, elevation) values by
+<li><p><strong>table</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><em>numpy.ndarray</em></a><em> or </em><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.2)"><em>pandas.DataFrame</em></a><em> or </em><a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.19.1.dev6)"><em>xarray.Dataset</em></a><em> or </em><a class="reference external" href="https://geopandas.org/docs/reference/api/geopandas.GeoDataFrame.html#geopandas.GeoDataFrame" title="(in GeoPandas v0.9.0)"><em>geopandas.GeoDataFrame</em></a>) – Pass in (x, y, z) or (longitude, latitude, elevation) values by
 providing a file name to an ASCII data table, a 2D
-<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>, a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>, an
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>, a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>, an
 <a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.19.1.dev6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a> made up of 1D <a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.19.1.dev6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a>
 data variables, or a <a class="reference external" href="https://geopandas.org/docs/reference/api/geopandas.GeoDataFrame.html#geopandas.GeoDataFrame" title="(in GeoPandas v0.9.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">geopandas.GeoDataFrame</span></code></a> containing the
 tabular data.</p></li>
@@ -460,7 +462,7 @@ cyclical coordinate transformations are supported:</p>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><p><strong>output</strong> (<em>pandas.DataFrame or None</em>) – Return type depends on whether the <code class="docutils literal notranslate"><span class="pre">outfile</span></code> parameter is set:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> table with (x, y, z) columns if <code class="docutils literal notranslate"><span class="pre">outfile</span></code>
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> table with (x, y, z) columns if <code class="docutils literal notranslate"><span class="pre">outfile</span></code>
 is not set.</p></li>
 <li><p>None if <code class="docutils literal notranslate"><span class="pre">outfile</span></code> is set (filtered output will be stored in file
 set by <code class="docutils literal notranslate"><span class="pre">outfile</span></code>).</p></li>
@@ -490,10 +492,10 @@ set by <code class="docutils literal notranslate"><span class="pre">outfile</spa
         &#169; Copyright 2017-2021, The PyGMT Developers.
       <span class="commit">
         
-        Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/31980e8">31980e8</a></code>.
+        Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/cd822ca2">cd822ca2</a></code>.
       </span>
       <span class="lastupdated">
-        Last updated on Aug 07, 2021.
+        Last updated on Aug 17, 2021.
       </span>
 
     </p>
